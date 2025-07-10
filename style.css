@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    /* || Colors */
+    --HEADING-COLOR: #00aaff;
+    --MISC-FONT-COLOR: whitesmoke;
+    --HEADER-COLOR: #1a1a2e;
+
+    /* || Sizing */
+    --ANCHOR-SIZE: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-image: url(kepek/);
+}
+
+header {
+    background-color: var(--HEADER-COLOR);
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+header h1 {
+    color: var(--MISC-FONT-COLOR);
+    padding-top: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+header nav a {
+    font-size: var(--ANCHOR-SIZE);
+    color: var(--HEADING-COLOR);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+header nav :is(a:hover, a:focus) {
+    background-color: var(--HEADING-COLOR);
+    color: var(--HEADER-COLOR)
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+}
