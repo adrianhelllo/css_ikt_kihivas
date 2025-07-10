@@ -29,9 +29,19 @@ body {
     animation: scroll 10s ease-in-out infinite;
     background-size: scale(2);
     overflow-x: hidden;
+    background-color: #1a1a1a;
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {
+    position: sticky;
     background-color: var(--HEADER-COLOR);
 }
 
