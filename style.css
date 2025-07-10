@@ -5,9 +5,14 @@
     --HEADING-COLOR: #00aaff;
     --MISC-FONT-COLOR: whitesmoke;
     --HEADER-COLOR: #1a1a2e;
+    --CARD-COLOR: #1a1a1a;
 
     /* || Sizing */
     --ANCHOR-SIZE: 1.2rem;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -18,7 +23,12 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background-image: url(kepek/);
+    background-image: url(kepek/hatter.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    animation: scroll 10s ease-in-out infinite;
+    background-size: scale(2);
+    overflow-x: hidden;
 }
 
 header {
@@ -27,6 +37,15 @@ header {
 
 h1, h2 {
     text-transform: uppercase;
+}
+
+h2 {
+    color: var(--HEADING-COLOR)
+}
+
+p {
+    color: var(--MISC-FONT-COLOR);
+    margin-bottom: 1rem;
 }
 
 header h1 {
@@ -60,4 +79,84 @@ header nav :is(a:hover, a:focus) {
 h1 {
     text-align: center;
     font-size: 3.5rem;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+article figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+article figure {
+    box-shadow: 0 0 10px 3px rgba(0, 170, 255, 0.3);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+article {
+    max-width: 65%;
+    background-color: var(--CARD-COLOR);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    padding: 1rem;
+
+}
+
+.character-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 0.6rem;
+    word-wrap: break-word;
+}
+
+.character-container figure {
+    max-width: 35%;
+    transition: all 0.25s ease-in-out;
+}
+
+.character-container :is(figure:hover, figure:focus) {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    color: var(--MISC-FONT-COLOR);
+    padding: 2rem;
+    background-color: #1a1a2e;
+}
+
+@keyframes scroll {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@media screen and (max-width:625px) {
+    header nav {
+        display: none;
+    }
+
+    .character-container {
+        flex-flow: column nowrap;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .character-container figure {
+        max-width: 70%;
+    }
 }
