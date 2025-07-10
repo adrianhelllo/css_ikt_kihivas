@@ -103,8 +103,7 @@ article {
     background-color: var(--CARD-COLOR);
     margin: 2rem auto;
     border-radius: 2rem;
-    padding: 1rem;
-
+    padding: 2rem;
 }
 
 .character-container {
