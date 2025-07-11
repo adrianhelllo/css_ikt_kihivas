@@ -126,7 +126,7 @@ article {
 }
 
 .character-container figure {
-  max-width: 35%;
+  max-width: 40%;
   display: relative;
   transition: all 0.25s ease-in-out;
 }
@@ -175,18 +175,32 @@ footer {
   }
 }
 
+@media screen and (max-width: 776px) {
+  .character-container :is(figure:hover, figure:focus)::after {
+    font-size: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 625px) {
   header nav {
     display: none;
   }
 
+  .character-container :is(figure:hover, figure:focus)::after {
+    font-size: 1rem;
+  }
+
   .character-container {
     flex-flow: column nowrap;
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 3rem;
+  }
+  
+  article {
+    max-width: 80%;
   }
 
   .character-container figure {
-    max-width: 70%;
+    max-width: 90%;
   }
 }
